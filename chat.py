@@ -1,9 +1,11 @@
+import os
 import openai
 import streamlit as st
 from streamlit_chat import message
 import json
-
-openai.api_key = "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"
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_text():
     ''' 
